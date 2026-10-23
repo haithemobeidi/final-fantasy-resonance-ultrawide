@@ -1,0 +1,2 @@
+# cmd.exe misparses LF-only batch files; force CRLF on checkout and in zip downloads
+*.bat text eol=crlf
