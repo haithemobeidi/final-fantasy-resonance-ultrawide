@@ -1,5 +1,14 @@
+# Claude Code protocol state
+.claude/pending-index-updates.txt
+.claude/settings.local.json
+.claude/worktrees/
+__pycache__/
+
+# Never ship binaries. The installer downloads PolarWizard's release and verifies its hash.
 *.dll
 *.asi
 *.zip
 *.bak
+
+# Local drafts
 STEAM_POST.txt
