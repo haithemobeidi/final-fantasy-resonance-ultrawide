@@ -3,7 +3,7 @@
 **Current phase:** Phase 3 Announce — installer published, Steam post not yet made
 **Build status:** working — check_command passes; nine-run matrix passed on a scratch exe folder 2026-10-23; live install user-confirmed at 3440x1440 on 2026-10-23
 
-_Last updated: 2026-10-23 01:30_
+_Last updated: 2026-10-23 01:32_
 
 > This file is the state of the PRODUCT, not the state of the session. Session narrative goes in `docs/HANDOFF_LOG.md`; ledger status is cited by ID, never restated; the phase list is the spine in `ROADMAP.md`. Overwrite at `/end` after re-reading from disk; never append.
 
