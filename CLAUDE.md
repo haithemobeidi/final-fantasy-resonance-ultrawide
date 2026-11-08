@@ -63,7 +63,7 @@ Scratch copy: a folder holding only `FFRS-Win64-Shipping.exe` (495 MB) copied fr
 
 ## Overrides of global rules
 
-None.
+- **500-line file target (work style "Audits") does not apply here.** The `.bat` files are single-file, one-and-done distributables that cannot be split without breaking double-click delivery. User ruling 2026-11-08: size matters only for production projects that grow and need maintenance. `check-file-caps.py` soft breaches on `*.bat` are not ledgered; the 800 hard cap still stops a wrap.
 
 ## Where things live
 

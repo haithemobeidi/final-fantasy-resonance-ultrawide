@@ -4,7 +4,7 @@
 
 **Maintenance:** Enforced by a `PostToolUse` hook. When you Write or Edit a file that is not listed here, its path is queued in `.claude/pending-index-updates.txt`; `/end` refuses to complete until every queued path has a row. `validate-index.py` (run at `/end`) flags rows whose files no longer exist.
 
-**Last updated:** 2026-10-23
+**Last updated:** 2026-11-08
 
 ---
 
@@ -13,6 +13,7 @@
 | File | Purpose |
 |---|---|
 | `FFRS_Ultrawide_Fix.bat` | The product. Batch header + embedded PowerShell: finds the game, checks the exe build, downloads and hash-checks PolarWizard's 0.2.0 zip, rewrites the five demo offsets to retail, hash-checks the result, installs loader + plugin + config, forces `[hud] enable = false`; option 2 removes exactly what it added |
+| `FFRS_Luma_Upscaler.bat` | Second, independent product, same `.bat` shape. Downloads and hash-checks Luma for Unreal Engine (build 801) and jmroon's Anti-Aliasing Options 1.0.1 Standalone (UE4SS), refuses any build but PE 0x6A586B2F and any foreign pre-existing file, installs both, seeds `[Luma] DLSSRenderPreset=11` (K) in ReShade.ini, adds `-dx11` to Steam's localconfig.vdf (closes and reopens Steam after asking), writes `_ffrs_luma_installed_files.txt`; status reads ReShade.log for Luma/TAA/FSR 4 lines; option 2 removes exactly what it added. Test hooks: `FFRS_GAME_DIR`, `FFRS_STEAM_LOCALCONFIG` (a localconfig copy; Steam never touched), `FFRS_CLOSE_STEAM=y` |
 | `README.md` | Player-facing guide: install, remove, manual hex-editor route, what the two offsets are and how they were verified, HUD note, known limits, credits |
 | `LICENSE` | MIT, for the script and the docs |
 | `STEAM_POST.txt` | Steam forum announcement draft in BBCode. Gitignored; lives only on this machine |
@@ -26,7 +27,7 @@
 
 | File | Purpose |
 |---|---|
-| `tools/check-bat.ps1` | `check_command`: fails if the `.bat` has LF-only endings, non-ASCII bytes, a missing or duplicated PowerShell marker, or embedded PowerShell that does not parse |
+| `tools/check-bat.ps1` | `check_command`: for every `*.bat` in the root, fails on LF-only endings, non-ASCII bytes, a missing or duplicated PowerShell marker, or embedded PowerShell that does not parse |
 
 ## docs/
 

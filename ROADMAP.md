@@ -8,8 +8,9 @@ Single track. The spine below is the source of truth for phase status; `docs/CUR
 |---|---|---|
 | 1. Fix works on the retail build | DONE 2026-10-23 | User-confirmed at 3440x1440: gameplay, menus, battles full width; movies 16:9 by design |
 | 2. Distributable installer + README | DONE 2026-10-23 | Nine-run matrix passed on a scratch exe folder; repo public on GitHub |
-| 3. Announce | CURRENT | Steam post + comment on PolarWizard issue #1, both the user's to send (L-2) |
+| 3. Announce | WAITING ON USER | Steam post + comment on PolarWizard issue #1, both the user's to send (L-2) |
 | 4. Track upstream and game updates | PENDING | A game update or a PolarWizard retail release invalidates the constants (L-1) |
+| 5. Luma upscaler setup (DLSS / FSR 4) | CURRENT | Pause A passed on the RTX 5090 PC 2026-11-08; Ally X20 run pending (L-3) |
 
 ## Phases
 
@@ -17,3 +18,4 @@ Single track. The spine below is the source of truth for phase status; `docs/CUR
 2. **Installer** — the `.bat` (download, verify, patch, verify, install, remove), README with the manual route and the evidence, MIT license.
 3. **Announce** — Steam forum post (`STEAM_POST.txt`), a pointer on upstream issue #1.
 4. **Maintain** — when the exe or the upstream release changes, re-verify and either update the constants or retire the patch step.
+5. **Luma upscaler** — `FFRS_Luma_Upscaler.bat`, independent of the ultrawide fix: Luma for Unreal Engine (DLSS / FSR 4 / XeSS replacing TAA at native resolution) + jmroon's Anti-Aliasing Options (TAA in the menu, UE4SS) + Steam `-dx11`. One-and-done personal tool; publishing is the user's call after the Ally run.
